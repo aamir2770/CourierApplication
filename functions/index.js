@@ -7,7 +7,7 @@ const gmailEmail = encodeURIComponent(functions.config().gmail.email);
 const gmailPassword = encodeURIComponent(functions.config().gmail.password);
 const mailTransport = nodemailer.createTransport(
     `smtps://${gmailEmail}:${gmailPassword}@smtp.gmail.com`);
-const APP_NAME = 'Courier App';
+const APP_NAME = 'iDeras App';
 
 exports.sendNotificationToCouriers = functions.database.ref('/orders/{$projectId}')
 	.onWrite(event => {
